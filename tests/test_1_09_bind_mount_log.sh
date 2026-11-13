@@ -98,7 +98,7 @@ fi
 PRE_EXISTING_CONTENT="$(cat "$LOG_FILE")"
 
 docker run -d --name "$CONTAINER" \
-  -v "$LOG_FILE:/usr/src/app/text.log" \
+  -v "$LOG_FILE:/usr/src/app/text.log:Z" \
   devopsdockeruh/simple-web-service >/dev/null 2>&1 \
   || fail "docker run failed to start the container with the bind mount"
 pass "container started with service.log bind-mounted to /usr/src/app/text.log"
