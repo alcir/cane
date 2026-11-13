@@ -1,0 +1,2 @@
+docker build -t go-backend-1_13 .
+docker run -d -p 8080:8080 --name go-app-container go-backend-1_13

@@ -1,0 +1,5 @@
+docker build -t frontend -f Dockerfile.frontend ..
+docker build -t backend -f Dockerfile.backend ..
+
+docker run -d -p 8080:8080 --name backend-container backend
+docker run -d -p 5001:5001 --name frontend-container frontend

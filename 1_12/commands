@@ -1,0 +1,2 @@
+docker build -t react-app-1_12 .
+docker run -p 5001:5001 react-app-1_12
